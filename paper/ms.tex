@@ -51,26 +51,24 @@ Chicago, 5640 S. Ellis Ave, Chicago, IL 60637, USA}
 %% research note leave the \section call blank to make the title.
 \section*{}
 
-Stellar photometry from charged-couple devices is at the core of astronomical
-observations. Often it is the case where the astronomical object of interest
-is isolated so that aperture photometry can be performed. In crowded regions,
-conversely, targets are not disjoint and therefore point spread function (PSF)
-photometry is the principled way to obtain meaningful
-measurements~\citep{heasley:1999}.
+Photometry from charged-couple devices (CCDs) lies at the core of astronomical
+observations.  When targets are isolated, aperture photometry
+can be performed by summing the flux across an appropriate selection of pixels.
+In crowded regions, conversely, targets are not disjoint and more complicated
+techniques such as point spread function (PSF) fitting or difference imaging
+photometry need to be employed~\citep[e.g. see][]{heasley:1999}.
 
-PSF photometry consists of fitting the parameters of the PSF to a given image.
-In many scientific analsysis, due to implications of the Central Limit
-Theorem~\citep{grimmett:2001}, the $\chi^2$ statistic has been traditionally
-and successfully used to estimate parameters.
+PSF photometry consists of fitting the parameters of a PSF model to the images
+of stars.  Traditionally, maximum likelihood esimates of the parameters
+are obtained by minimizing the  $\chi^2$ statistic, inspired by the
+implications of the Central Limit Theorem~\citep{grimmett:2001}.
 
-In this letter, we advocate that the $\chi^2$ statistic might not be adequate
+In this note, we advocate that the $\chi^2$ statistic might not be adequate
 for PSF photometry for two main reasons: (I) the assumption of Gaussian
 distributed data is only compatible with the nature of pixel data in an
 assymptotic sense; (II) the $\chi^2$ statistic yields a maximum likelihood
 estimator (MLE) for the total number of counts which is biased, and therefore
 it is only compatible with aperture photometry in an assymptotic sense.
-\zetodo{This is redundant, you could save some words here by rearranging
-so you don't say "in an assymptotic sense" twice}
 
 Here, we report that under Poissonian data distributed assumptions,
 and for a very general family of PSF models, the total number of counts
